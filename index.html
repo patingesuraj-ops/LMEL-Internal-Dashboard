@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LMEL Internal Link Dashboard</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* Full-page background image */
+    body {
+      background: url('ghugus-banner-scaled-aspect-ratio-1920-700-scaled.jpg?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #212529;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+  .main-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.1); /* very transparent */
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  }
+
+    /* Make tile grid transparent */
+    #tileGrid {
+      background: transparent !important;
+    }
+
+
+	.category {
+	  background-color: #ffffff;  /* solid white */
+	  border-radius: 15px;
+	  padding: 20px;
+	  transition: 0.3s;
+	  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	}
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .category h5 {
+      color: #0d6efd;
+    }
+
+    .category a {
+      color: #0d6efd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .category a:hover {
+      color: #20c997;
+      text-decoration: underline;
+    }
+
+    .dark-mode .main-container {
+      background: rgba(33, 37, 41, 0.92);
+      color: #f8f9fa;
+    }
+
+    .dark-mode #tileGrid {
+      background: transparent !important;
+    }
+
+    .dark-mode .category {
+      background-color: rgba(52, 58, 64, 0.6);
+      color: #f8f9fa;
+    }
+
+    .dark-mode .category:hover {
+      background-color: rgba(52, 58, 64, 0.85);
+    }
+
+    .dark-mode .category h5 {
+      color: #66b2ff;
+    }
+
+    .dark-mode a {
+      color: #66b2ff;
+    }
+
+    .dark-mode a:hover {
+      color: #38d9a9;
+    }
+
+    .form-switch {
+      float: right;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #adb5bd;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .form-switch {
+        float: none;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container main-container">
+    <!-- Header -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center">
+        <img src="lloyds-metals-logo.svg" alt="Logo" height="50" class="me-3" />
+        <h3 class="mb-0">🔗 LMEL Internal Dashboard</h3>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkSwitch" />
+        <label class="form-check-label" for="darkSwitch">Dark Mode</label>
+      </div>
+    </div>
+
+    <!-- Greeting -->
+    <div class="alert alert-primary d-flex justify-content-between align-items-center" role="alert">
+      <span>👋 Welcome, <strong id="userName">LMEL Team</strong>!</span>
+    </div>
+
+    <!-- Search -->
+    <div class="mb-4">
+      <input
+        type="text"
+        class="form-control"
+        id="searchInput"
+        placeholder="Search tools or portals..."
+      />
+    </div>
+
+    <!-- Tiles -->
+    <div class="row g-4" id="tileGrid">
+      <div class="col-md-6 col-lg-4 category-box">
+        <div class="category h-100">
+          <h5>📂 Company Tools</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-envelope me-2"></i
+              ><a href="https://www.gmail.com" target="_blank">Company Email</a>
+            </li>
+            <li>
+              <i class="fas fa-network-wired me-2"></i
+              ><a href="https://sap.lloyds.in" target="_blank">SAP Portal</a>
+            </li>
+              <i class="fas fa-network-wired me-2"></i
+              ><a href="https://valabs.info/VAMSLLOYDS/Login.aspx" target="_blank">Visitor Management (VAMS)</a>
+            </li>
+
+            <li>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 category-box">
+        <div class="category h-100">
+          <h5>👨‍💼 HR & Admin</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-users me-2"></i
+              ><a href="https://lloyds.hono.ai/login?" target="_blank">HONO</a>
+            </li>
+              <i class="fas fa-network-wired me-2"></i
+              ><a href="http://103.27.86.251:8080/AtTrackPlus/#/login" target="_blank">CMS </a>
+             <li>
+              <i class="fas fa-users me-2"></i
+              ><a href="https://empower.in.mpms.mufg.com:8061/" target="_blank">ESOP</a>
+            </li>
+
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 category-box">
+        <div class="category h-100">
+          <h5>🛠️ IT Helpdesk</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-headset me-2"></i
+              ><a href="https://www.gmail.com" target="_blank"
+                >IT Helpdesk Ticketing</a
+              >
+            </li>
+                      </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 category-box">
+        <div class="category h-100">
+          <h5>
+			  <svg class="me-2" width="20" height="20" viewBox="0 0 48 48">
+				<path fill="#EA4335" d="M24 9.5c3.31 0 6.3 1.16 8.64 3.07l6.43-6.43C34.3 2.32 29.47 0 24 0 14.61 0 6.75 5.83 2.93 14.27l7.64 5.93C12.4 13.13 17.78 9.5 24 9.5z"/>
+				<path fill="#4285F4" d="M46.1 24.5c0-1.6-.14-3.14-.41-4.63H24v9.11h12.4c-.53 2.8-2.13 5.17-4.55 6.78v5.52h7.34c4.3-3.95 6.91-9.76 6.91-16.78z"/>
+				<path fill="#FBBC05" d="M10.57 28.36A14.94 14.94 0 0 1 9 24c0-1.51.26-2.96.72-4.31l-7.64-5.93A23.91 23.91 0 0 0 0 24c0 3.91.94 7.59 2.61 10.82l7.96-6.46z"/>
+				<path fill="#34A853" d="M24 48c6.48 0 11.93-2.15 15.91-5.84l-7.34-5.52c-2.06 1.38-4.7 2.2-8.57 2.2-6.22 0-11.6-3.63-13.43-8.71l-7.96 6.46C6.75 42.17 14.61 48 24 48z"/>
+			  </svg>
+			  Google Studio Reports
+		  </h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-chart-line me-2"></i
+              ><a href="https://aistudio.google.com/" target="_blank"
+                >Google Studio Dashboard</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 category-box">
+        <div class="category h-100">
+          <h5>📊 Reports & Analytics</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-database me-2"></i
+              ><a href="https://reports.company.com" target="_blank"
+                >Daily Reports</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+	  <div class="col-md-6 col-lg-4 category-box">
+			<div class="category h-100">
+			  <h5>🛒 Commercial Tools</h5>
+			  <ul class="list-unstyled">
+				<li>
+				  <i class="fas fa-chart-line me-2"></i
+				  ><a href="https://s1.jp.cloud.ariba.com/Sourcing/Main/ad/loginPage/SSOActions?awsso_cc=cGFzc3dvcmRhZGFwdGVyOlVHRnpjM2R2Y21SQlpHRndkR1Z5TVE9PTtyZWFsbTpOelEwTXpNMU1qVXo7YXdzc29fcnU6YUhSMGNITTZMeTl6TVM1cWNDNWpiRzkxWkM1aGNtbGlZUzVqYjIwdlUyOTFjbU5wYm1jdlRXRnBiajl5WldGc2JUMDNORFF6TXpVeU5UTW1jR0Z6YzNkdmNtUmhaR0Z3ZEdWeVBWQmhjM04zYjNKa1FXUmhjSFJsY2pFPTthd3Nzb19sdTphSFIwY0hNNkx5OXpNUzVxY0M1amJHOTFaQzVoY21saVlTNWpiMjB2VTI5MWNtTnBibWN2VFdGcGJpOWhaQzlqYkdsbGJuUk1iMmR2ZFhRdlUxTlBRV04wYVc5dWN3PT07YXdzc29fYXA6UVVOTjthd3Nzb19hcmlkOk1UYzFNVGN4TkRNMk56RXpNQT09O2F3c3NvX2t1OmFIUjBjSE02THk5ek1TNXFjQzVqYkc5MVpDNWhjbWxpWVM1amIyMHZVMjkxY21OcGJtY3ZUV0ZwYmk5aFpDOWpiR2xsYm5STFpXVndRV3hwZG1VdlUxTlBRV04wYVc5dWN3PT07YXdzc29fZmw6TVE9PQ%3D%3D%3A5r7pw4IeH6gLwYP2DjcSWYmruHo%3D&awsso_ap=ACM&awsso_hpk=true&passwordadapter=PasswordAdapter1&realm=744335253&awsr=true" target="_blank"
+					>Commercial-Purchase </a
+				  >
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+
+    <!-- Footer -->
+    <footer class="mt-5">LMEL Internal Use Only | © 2025 Lloyds Metals</footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkSwitch");
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      darkToggle.checked = true;
+    }
+
+    darkToggle.addEventListener("change", () => {
+      if (darkToggle.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+
+    // Search filter
+    const searchInput = document.getElementById("searchInput");
+    const categoryBoxes = document.querySelectorAll(".category-box");
+
+    searchInput.addEventListener("input", () => {
+      const val = searchInput.value.toLowerCase();
+      categoryBoxes.forEach((box) => {
+        const text = box.innerText.toLowerCase();
+        box.style.display = text.includes(val) ? "" : "none";
+      });
+    });
+
+    // Change user name
+    function changeUser() {
+      const user = prompt("Enter your name:", "LMEL Team");
+      if (user) {
+        document.getElementById("userName").textContent = user;
+      }
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
